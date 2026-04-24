@@ -11,32 +11,25 @@ channels = {
     "📺 gen": BASE + "/en-vivo/gentv.php",
     "📺 ae": BASE + "/en-vivo/ae.php",
     "📺 axn": BASE + "/en-vivo/axn.php",
-    "📺 Discovery ID": BASE + "/en-vivo/investigacion-discovery.php",
-    "📺 NatGeo": BASE + "/en-vivo/natgeo.php",
-    "📺 History": BASE + "/en-vivo/history-2.php",
-    "📺 Space": BASE + "/en-vivo/space.php",
-    "📺 TNT Series": BASE + "/en-vivo/tntseries.php",
-    "📺 History Channel": BASE + "/en-vivo/history-channel.php",
-    "📺 FOX": BASE + "/en-vivo/fox.php",
-    "📺 TNT": BASE + "/en-vivo/tnt.php",
-    "📺 Space": BASE + "/en-vivo/space.php",
-    "📺 TNT Series": BASE + "/en-vivo/tntseries.php",
-    "📺 History Channel": BASE + "/en-vivo/history-channel.php",
-    "📺 FOX": BASE + "/en-vivo/fox.php",
-    "📺 TNT": BASE + "/en-vivo/tnt.php",
-    "📺 Space": BASE + "/en-vivo/space.php",
-    "📺 TNT Series": BASE + "/en-vivo/tntseries.php",
-    "📺 History Channel": BASE + "/en-vivo/history-channel.php",
-    "📺 FOX": BASE + "/en-vivo/fox.php",
-    "📺 TNT": BASE + "/en-vivo/tnt.php",
-    "📺 Space": BASE + "/en-vivo/space.php",
-    "📺 TNT Series": BASE + "/en-vivo/tntseries.php",
-    "📺 History Channel": BASE + "/en-vivo/history-channel.php",
-    "📺 FOX": BASE + "/en-vivo/fox.php",
-    "📺 TNT": BASE + "/en-vivo/tnt.php",
- }   
+    "📺 Telefuturo": BASE + "/en-vivo/telefuturo.php",
+    "📺 Paravision": BASE + "/en-vivo/paravision.php",
+    "📺 gen": BASE + "/en-vivo/gentv.php",
+    "📺 ae": BASE + "/en-vivo/ae.php",
+    "📺 axn": BASE + "/en-vivo/axn.php",
+    "📺 Telefuturo": BASE + "/en-vivo/telefuturo.php",
+    "📺 Paravision": BASE + "/en-vivo/paravision.php",
+    "📺 gen": BASE + "/en-vivo/gentv.php",
+    "📺 ae": BASE + "/en-vivo/ae.php",
+    "📺 axn": BASE + "/en-vivo/axn.php",
+    "📺 Telefuturo": BASE + "/en-vivo/telefuturo.php",
+    "📺 Paravision": BASE + "/en-vivo/paravision.php",
+    "📺 gen": BASE + "/en-vivo/gentv.php",
+    "📺 ae": BASE + "/en-vivo/ae.php",
+    "📺 axn": BASE + "/en-vivo/axn.php",
     
-  result = {"channels": []}
+}
+
+result = {"channels": []}
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36",
@@ -113,16 +106,11 @@ for name, url in channels.items():
         print("❌ ERROR:", str(e))
 
 # guardar JSON
-if result["channels"]:
-    with open("streams.json", "w", encoding="utf-8") as f:
-        json.dump(result, f, indent=2, ensure_ascii=False)
-
-    print("JSON actualizado")
-else:
-    print("No se encontraron canales")
+with open("streams.json", "w", encoding="utf-8") as f:
+    json.dump(result, f, indent=2, ensure_ascii=False)
+ 
 
 print("\n🔥 JSON actualizado:", len(result["channels"]))
-  
 
 
     
