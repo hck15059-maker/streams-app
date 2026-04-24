@@ -1,4 +1,4 @@
-import requests
+import cloudscraper
 import re
 import json
 import time
@@ -24,7 +24,7 @@ headers = {
     "Connection": "keep-alive"
 }
 
-session = requests.Session()
+session = cloudscraper.create_scraper()
 session.headers.update(headers)
 
 def extract_iframe(html):
