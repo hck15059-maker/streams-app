@@ -14,13 +14,7 @@ channels = {
     
 }
 
-if result["channels"]:
-    with open("streams.json", "w", encoding="utf-8") as f:
-        json.dump(result, f, indent=2, ensure_ascii=False)
-
-    print("JSON actualizado")
-else:
-    print("No se encontraron canales")
+result = {"channels": []}
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36",
@@ -97,8 +91,12 @@ for name, url in channels.items():
         print("❌ ERROR:", str(e))
 
 # guardar JSON
-with open("streams.json", "w", encoding="utf-8") as f:
-    json.dump(result, f, indent=2, ensure_ascii=False)
- 
+if result["channels"]:
+    with open("streams.json", "w", encoding="utf-8") as f:
+        json.dump(result, f, indent=2, ensure_ascii=False)
+
+    print("JSON actualizado")
+else:
+    print("No se encontraron canales")
 
 print("\n🔥 JSON actualizado:", len(result["channels"]))
