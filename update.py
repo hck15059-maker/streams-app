@@ -11,7 +11,17 @@ channels = {
     "📺 gen": BASE + "/en-vivo/gentv.php",
     "📺 ae": BASE + "/en-vivo/ae.php",
     "📺 axn": BASE + "/en-vivo/axn.php",
-    
+   # 🔥 Nuevos canales agregados
+    "📺 Investigacion Discovery": BASE + "/en-vivo/investigacion-discovery.php",
+    "📺 SNT": BASE + "/en-vivo/snt.php",
+    "📺 Latele": BASE + "/en-vivo/latele.php",
+    "📺 Unicanal": BASE + "/en-vivo/unicanal.php",
+    "📺 Tigo Sports": BASE + "/en-vivo/tigosports.php",
+
+    # 🎬 Internacionales (si están disponibles en la web)
+    "📺 CNN": BASE + "/en-vivo/cnn.php",
+    "📺 FOX": BASE + "/en-vivo/fox.php",
+    "📺 NatGeo": BASE + "/en-vivo/natgeo.php"
 }
 
 result = {"channels": []}
