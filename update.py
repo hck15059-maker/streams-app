@@ -19,16 +19,24 @@ channels = {
     "📺 History Channel": BASE + "/en-vivo/history-channel.php",
     "📺 FOX": BASE + "/en-vivo/fox.php",
     "📺 TNT": BASE + "/en-vivo/tnt.php",
-   
+    "📺 Space": BASE + "/en-vivo/space.php",
+    "📺 TNT Series": BASE + "/en-vivo/tntseries.php",
+    "📺 History Channel": BASE + "/en-vivo/history-channel.php",
+    "📺 FOX": BASE + "/en-vivo/fox.php",
+    "📺 TNT": BASE + "/en-vivo/tnt.php",
+    "📺 Space": BASE + "/en-vivo/space.php",
+    "📺 TNT Series": BASE + "/en-vivo/tntseries.php",
+    "📺 History Channel": BASE + "/en-vivo/history-channel.php",
+    "📺 FOX": BASE + "/en-vivo/fox.php",
+    "📺 TNT": BASE + "/en-vivo/tnt.php",
+    "📺 Space": BASE + "/en-vivo/space.php",
+    "📺 TNT Series": BASE + "/en-vivo/tntseries.php",
+    "📺 History Channel": BASE + "/en-vivo/history-channel.php",
+    "📺 FOX": BASE + "/en-vivo/fox.php",
+    "📺 TNT": BASE + "/en-vivo/tnt.php",
  }   
     
-    
-
-
-    
-    
-
-result = {"channels": []}
+  result = {"channels": []}
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36",
@@ -114,3 +122,9 @@ else:
     print("No se encontraron canales")
 
 print("\n🔥 JSON actualizado:", len(result["channels"]))
+  
+
+
+    
+    
+
