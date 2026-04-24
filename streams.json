@@ -1,24 +1,3 @@
 {
-  "channels": [
-    {
-      "name": "📺 Telefuturo",
-      "url": "https://telegratuita.net/repro/?r=L3BocC9mbC8/Z2V0PVZFVk1SVVpWVkZWU1QxOUROQT09"
-    },
-    {
-      "name": "📺 Paravision",
-      "url": "https://telegratuita.net/repro/?r=L3BocC9mbC8/Z2V0PVVFRlNRVlpKVTBsUFRsOUROQT09"
-    },
-    {
-      "name": "📺 gen",
-      "url": "https://telegratuita.net/repro/?r=L3BocC9mbC8/Z2V0PVIwVk9YMVJX"
-    },
-    {
-      "name": "📺 ae",
-      "url": "https://telegratuita.net/repro/?r=L3ByaS5waHA/aWQ9YXll"
-    },
-    {
-      "name": "📺 axn",
-      "url": "https://telegratuita.net/repro/?r=Ly90ZWxlZGVwb3J0ZXMub3JnL2dyL3Bydi5waHA/aWQ9YXhu"
-    }
-  ]
+  "channels": []
 }
