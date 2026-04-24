@@ -18,7 +18,7 @@ channels = {
     "📺 TNT Series": BASE + "/en-vivo/tntseries.php",
     "📺 History Channel": BASE + "/en-vivo/history-channel.php",
     "📺 FOX": BASE + "/en-vivo/fox.php",
-    "📺 NatGeo": BASE + "/en-vivo/natgeo.php"
+    "📺 TNT": BASE + "/en-vivo/tnt.php"
    
  }   
     
