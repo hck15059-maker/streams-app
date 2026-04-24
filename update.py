@@ -91,6 +91,6 @@ for name, url in channels.items():
 # guardar JSON
 with open("streams.json", "w", encoding="utf-8") as f:
     json.dump(result, f, indent=2, ensure_ascii=False)
-    print("RUNNING OK")
+ 
 
 print("\n🔥 JSON actualizado:", len(result["channels"]))
