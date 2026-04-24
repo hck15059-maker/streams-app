@@ -19,8 +19,9 @@ jobs:
         python-version: '3.x'
 
     - name: Instalar dependencias
-      run: pip install requests
-     
+      run: |
+        pip install requests
+        pip install cloudscraper
 
     - name: Ejecutar script
       run: python update.py
