@@ -12,8 +12,8 @@ channels = {
     "📺 ae": BASE + "/en-vivo/ae.php",
     "📺 axn": BASE + "/en-vivo/axn.php",
    # 🔥 Nuevos canales agregados
-    "📺 Investigacion Discovery": BASE + "/en-vivo/investigacion-discovery.php",
-    "📺 SNT": BASE + "/en-vivo/snt.php",
+    "📺 Discovery ID": BASE + "/en-vivo/investigacion-discovery.php",
+    "📺 NatGeo": BASE + "/en-vivo/natgeo.php",
     "📺 Latele": BASE + "/en-vivo/latele.php",
     "📺 Unicanal": BASE + "/en-vivo/unicanal.php",
     "📺 Tigo Sports": BASE + "/en-vivo/tigosports.php",
