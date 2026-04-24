@@ -25,7 +25,7 @@ channels = {
     "📺 Paravision": BASE + "/en-vivo/paravision.php",
     "📺 gen": BASE + "/en-vivo/gentv.php",
     "📺 ae": BASE + "/en-vivo/ae.php",
-    "📺 axn": BASE + "/en-vivo/axn.php",
+    "📺 History Chanel": BASE + "/en-vivo/history-2.php",
     
 }
 
