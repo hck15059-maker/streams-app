@@ -26,6 +26,10 @@ channels = {
     "📺 NatGeo": BASE + "/en-vivo/natgeo.php",
     "📺 History Chanel": BASE + "/en-vivo/history-channel.php",
     "📺 History Chanel2": BASE + "/en-vivo/history-2.php",
+    "📺 Cartoon Network": BASE + "/en-vivo/cartoon-network.php",
+    "📺 Discovery Kids": BASE + "/en-vivo/discovery-kids.php",
+    "📺 Disney Channel": BASE + "/en-vivo/disney-channel.php",
+    "📺 Disney JR": BASE + "/en-vivo/disneyjr.php",
     
 }
 
