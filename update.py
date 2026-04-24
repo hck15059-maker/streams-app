@@ -13,7 +13,7 @@ channels = {
     "📺 axn": BASE + "/en-vivo/axn.php",
     "📺 Discovery ID": BASE + "/en-vivo/investigacion-discovery.php",
     "📺 NatGeo": BASE + "/en-vivo/natgeo.php",
-    "📺 Latele": BASE + "/en-vivo/latele.php",
+    "📺 History": BASE + "/en-vivo/history-2.php",
     "📺 Space": BASE + "/en-vivo/space.php",
     "📺 TNT Series": BASE + "/en-vivo/tntseries.php",
     "📺 History Channel": BASE + "/en-vivo/history-channel.php",
