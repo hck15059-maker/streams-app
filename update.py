@@ -44,7 +44,7 @@ for name, url in channels.items():
         html = res.text
 
         print("📊 STATUS:", res.status_code)
-        print("📦 SIZE:", len(html))
+        print(html[:500])
 
         iframe = extract_iframe(html)
 
