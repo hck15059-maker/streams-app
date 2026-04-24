@@ -1,0 +1,33 @@
+name: Update Streams
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # cada hora
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clonar repo
+      uses: actions/checkout@v3
+
+    - name: Instalar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Instalar requests
+      run: pip install requests
+
+    - name: Ejecutar script
+      run: python update.py
+
+    - name: Subir cambios
+      run: |
+        git config user.name "bot"
+        git config user.email "bot@github.com"
+        git add streams.json
+        git commit -m "update stream" || echo "no changes"
+        git push
