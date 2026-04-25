@@ -25,7 +25,6 @@ headers = {
 session = requests.Session()
 session.headers.update(headers)
 
-
 def scrape_telegratuita(session, BASE, channels):
 
     result = []
@@ -34,60 +33,70 @@ def scrape_telegratuita(session, BASE, channels):
         try:
             print("\n📺 TELEGRATUITA:", name)
 
+            # 🔹 Paso 1
             res = session.get(url, timeout=15)
             html = res.text
 
-            # 🔥 1. BUSCAR repro DIRECTO (CLAVE)
-            match = re.search(r'https://telegratuita\.net/repro/\?r=[^"\']+', html)
+            iframe = re.findall(r'<iframe[^>]+src=["\'](.*?)["\']', html)
+
+            if not iframe:
+                print("❌ sin iframe")
+                continue
+
+            iframe_url = iframe[0]
+            full_iframe = iframe_url if iframe_url.startswith("http") else BASE + iframe_url
+
+            print("👉 IFRAME 1:", full_iframe)
+
+            # 🔹 Paso 2
+            res2 = session.get(full_iframe, timeout=15)
+            html2 = res2.text
+
+            # 🔥 buscar repro aquí
+            match = re.search(r'/repro/\?r=[^"\']+', html2)
+
             if match:
-                final_url = match.group(0)
+                final_url = BASE + match.group(0)
 
                 result.append({
                     "name": name,
                     "url": final_url
                 })
 
-                print("✅ REPRO DIRECTO:", final_url)
+                print("✅ REPRO:", final_url)
                 continue
 
-            # 🔥 2. SI NO, intentar iframe
-            iframe = re.findall(r'<iframe[^>]+src=["\'](.*?)["\']', html)
+            # 🔹 Paso 3 (extra fallback)
+            iframe2 = re.findall(r'<iframe[^>]+src=["\'](.*?)["\']', html2)
 
-            if iframe:
-                iframe_url = iframe[0]
-                full_iframe = iframe_url if iframe_url.startswith("http") else BASE + iframe_url
+            if iframe2:
+                iframe_url2 = iframe2[0]
+                full_iframe2 = iframe_url2 if iframe_url2.startswith("http") else BASE + iframe_url2
 
-                res2 = session.get(full_iframe, timeout=15)
-                html2 = res2.text
+                print("👉 IFRAME 2:", full_iframe2)
 
-                match2 = re.search(r'https://telegratuita\.net/repro/\?r=[^"\']+', html2)
+                res3 = session.get(full_iframe2, timeout=15)
+                html3 = res3.text
+
+                match2 = re.search(r'/repro/\?r=[^"\']+', html3)
+
                 if match2:
-                    final_url = match2.group(0)
+                    final_url = BASE + match2.group(0)
 
                     result.append({
                         "name": name,
                         "url": final_url
                     })
 
-                    print("✅ REPRO DESDE IFRAME:", final_url)
+                    print("✅ REPRO 2:", final_url)
                     continue
 
-                # fallback
-                result.append({
-                    "name": name,
-                    "url": full_iframe
-                })
-
-                print("⚠️ usando iframe:", full_iframe)
-
-            else:
-                print("❌ No se encontró nada útil")
+            print("❌ no se encontró repro")
 
         except Exception as e:
-            print("❌ TELEGRATUITA ERROR:", e)
+            print("❌ ERROR:", e)
 
     return result
-
 
 # =========================
 # 🔹 TVLIBR3
