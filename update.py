@@ -30,14 +30,6 @@ def scrape_telegratuita(session, BASE, channels):
 
     result = []
 
-    def extract_iframe(html):
-        matches = re.findall(r'<iframe[^>]+src=["\'](.*?)["\']', html)
-        return matches[0] if matches else None
-
-    def extract_m3u8(html):
-        matches = re.findall(r'(https?://[^\s"\']+\.m3u8[^\s"\']*)', html)
-        return matches[0] if matches else None
-
     for name, url in channels.items():
         try:
             print("\n📺 TELEGRATUITA:", name)
@@ -45,28 +37,51 @@ def scrape_telegratuita(session, BASE, channels):
             res = session.get(url, timeout=15)
             html = res.text
 
-            iframe = extract_iframe(html)
+            # 🔥 1. BUSCAR repro DIRECTO (CLAVE)
+            match = re.search(r'https://telegratuita\.net/repro/\?r=[^"\']+', html)
+            if match:
+                final_url = match.group(0)
 
-            # 🔥 si no hay iframe
-            if not iframe:
-                m3u8 = extract_m3u8(html)
-                if m3u8:
-                    result.append({"name": name, "url": m3u8})
+                result.append({
+                    "name": name,
+                    "url": final_url
+                })
+
+                print("✅ REPRO DIRECTO:", final_url)
                 continue
 
-            full_iframe = iframe if iframe.startswith("http") else BASE + iframe
+            # 🔥 2. SI NO, intentar iframe
+            iframe = re.findall(r'<iframe[^>]+src=["\'](.*?)["\']', html)
 
-            res2 = session.get(full_iframe, timeout=15)
-            html2 = res2.text
+            if iframe:
+                iframe_url = iframe[0]
+                full_iframe = iframe_url if iframe_url.startswith("http") else BASE + iframe_url
 
-            m3u8 = extract_m3u8(html2)
+                res2 = session.get(full_iframe, timeout=15)
+                html2 = res2.text
 
-            final_url = m3u8 if m3u8 else full_iframe
+                match2 = re.search(r'https://telegratuita\.net/repro/\?r=[^"\']+', html2)
+                if match2:
+                    final_url = match2.group(0)
 
-            result.append({
-                "name": name,
-                "url": final_url
-            })
+                    result.append({
+                        "name": name,
+                        "url": final_url
+                    })
+
+                    print("✅ REPRO DESDE IFRAME:", final_url)
+                    continue
+
+                # fallback
+                result.append({
+                    "name": name,
+                    "url": full_iframe
+                })
+
+                print("⚠️ usando iframe:", full_iframe)
+
+            else:
+                print("❌ No se encontró nada útil")
 
         except Exception as e:
             print("❌ TELEGRATUITA ERROR:", e)
