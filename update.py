@@ -152,7 +152,7 @@ def scrape_tvlibr3(max_retries=3):
                 final_url = f"https://tvlibr3.com/html/fl/?get={encoded_param}"
 
                 result.append({
-                    "name": "📺 SNT (TVLIBR3)",
+                    "name": "📺 SNT ",
                     "url": final_url,
                     "source": "tvlibr3",
                     "decoded_param": decoded_param if 'decoded_param' in locals() else None
