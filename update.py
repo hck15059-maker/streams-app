@@ -34,26 +34,35 @@ def extract_m3u8(html):
     return matches[0] if matches else None
 
 def extract_tvlibr3(url):
-    """Método especial (tu segundo script integrado)"""
     try:
         res = requests.get(url, timeout=10)
         soup = BeautifulSoup(res.content, 'html.parser')
 
         iframe = soup.find('iframe', {'id': 'iframe'})
-        if iframe:
-            src = iframe.get('src')
+        if not iframe:
+            return None
 
-            if '?get=' in src:
-                encoded = src.split('?get=')[1]
-                decoded = base64.b64decode(encoded).decode('utf-8')
-                return decoded
+        src = iframe.get('src')
 
-            return src
+        if '?get=' in src:
+            encoded = src.split('?get=')[1]
+            decoded = base64.b64decode(encoded).decode('utf-8')
+
+            print("🔓 Decodificado:", decoded)
+
+            # 🔥 SI NO ES URL, hay que construirla
+            if not decoded.startswith("http"):
+                # Probá armar URL manual
+                return f"https://tvlibr3.com/player/{decoded}"
+
+            return decoded
+
+        return src
+
     except Exception as e:
         print("❌ TVLIBRE ERROR:", e)
 
     return None
-
 
 for name, url in channels.items():
     try:
