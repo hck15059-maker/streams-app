@@ -48,27 +48,14 @@ def extract_tvlibr3(url):
             encoded = src.split('?get=')[1]
             return f"https://tvlibr3.com/player/?get={encoded}"
 
-        return src
-
-    except Exception as e:
-        print("❌ TVLIBRE ERROR:", e)
-        return None
-
-        src = iframe.get('src')
-
-        encoded = src.split('?get=')[1]
-
-      # devolver la URL ORIGINAL sin tocarla
-            return f"https://tvlibr3.com/player/?get={encoded}"
-
             print("🔓 Decodificado:", decoded)
 
             # 🔥 SI NO ES URL, hay que construirla
             if not decoded.startswith("http"):
                 # Probá armar URL manual
-            return f"https://tvlibr3.com/player/{decoded}"
+                return f"https://tvlibr3.com/player/{decoded}"
 
-            
+            return decoded
 
         return src
 
