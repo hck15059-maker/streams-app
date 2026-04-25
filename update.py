@@ -44,18 +44,19 @@ def extract_tvlibr3(url):
 
         src = iframe.get('src')
 
-        if '?get=' in src:
-            encoded = src.split('?get=')[1]
+        encoded = src.split('?get=')[1]
 
-        # devolver la URL ORIGINAL sin tocarla
-           return f"https://tvlibr3.com/player/?get={encoded}"
+      # devolver la URL ORIGINAL sin tocarla
+            return f"https://tvlibr3.com/player/?get={encoded}"
 
             print("🔓 Decodificado:", decoded)
 
             # 🔥 SI NO ES URL, hay que construirla
             if not decoded.startswith("http"):
                 # Probá armar URL manual
-            return f"https://tvlibr3.com/player/{decoded}"
+                return f"https://tvlibr3.com/player/{decoded}"
+
+            return decoded
 
         return src
 
@@ -63,6 +64,7 @@ def extract_tvlibr3(url):
         print("❌ TVLIBRE ERROR:", e)
 
     return None
+
 
 for name, url in channels.items():
     try:
@@ -118,7 +120,6 @@ with open("streams.json", "w", encoding="utf-8") as f:
     json.dump(result, f, indent=2, ensure_ascii=False)
 
 print("\n🔥 JSON actualizado:", len(result["channels"]))
-
 
     
     
