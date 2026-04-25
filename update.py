@@ -1,4 +1,3 @@
-
 import requests
 from bs4 import BeautifulSoup
 import base64
@@ -18,35 +17,15 @@ telegratuita_channels = {
     "📺 Telefuturo": BASE + "/en-vivo/telefuturo.php",
     "📺 Paravision": BASE + "/en-vivo/paravision.php",
     "📺 GEN": BASE + "/en-vivo/gentv.php",
-    "📺 A&E": BASE + "/en-vivo/ae.php",
+    "📺 AE": BASE + "/en-vivo/ae.php",
     "📺 AXN": BASE + "/en-vivo/axn.php",
-    "📺 TNT": BASE + "/en-vivo/tnt.php",
-    "📺 HBO": BASE + "/en-vivo/hbo.php",
-    "📺 De Pelicula": BASE + "/live/depelicula.php",
-    "📺 Space": BASE + "/en-vivo/space.php",
-    "📺 Cine Max": BASE + "en-vivo/cinemax.php",
-    "📺 Cinecanal": BASE + "/en-vivo/cinecanal.php",
-    "📺 TNT Series": BASE + "/en-vivo/tntseries.php",
-    "📺 Dicovery Chanel": BASE + "/en-vivo/discovery-channel.php",
-    "📺 Discovery Home": BASE + "/en-vivo/discovery-home-and-health.php",
-    "📺 Discovery ID": BASE + "/en-vivo/investigacion-discovery.php",
-    "📺 Discovery Science": BASE + "/en-vivo/discovery-science.php",
-    "📺 Anima Planet": BASE + "/en-vivo/animalplanet.php",
-    "📺 NatGeo": BASE + "/en-vivo/natgeo.php",
-    "📺 History Chanel": BASE + "/en-vivo/history-channel.php",
-    "📺 History Chanel2": BASE + "/en-vivo/history-2.php",
 }
 
 tvlibr3_channels = {
     "📺 SNT": "https://tvlibr3.com/en-vivo/snt/",
-    "📺 LaTele": "https://tvlibr3.com/en-vivo/latele/",
-    "📺 Trece": "https://tvlibr3.com/en-vivo/trecepy/",
-    "📺 NPY": "https://tvlibr3.com/en-vivo/noticiaspy/",
+    "📺 Telefuturo": "https://tvlibr3.com/en-vivo/telefuturo/",
+    "📺 Trece": "https://tvlibr3.com/en-vivo/trece/",
     "📺 C9N": "https://tvlibr3.com/en-vivo/c9n/",
-    "📺 ESPN Premiun": "https://tvlibr3.com/en-vivo/espn-premium/",
-    "📺 ESPN1": "https://tvlibr3.com/en-vivo/espn/",
-    "📺 ESPN2": "https://tvlibr3.com/en-vivo/espn-2/",
-    "📺 ESPN3": "https://tvlibr3.com/en-vivo/espn-3/",    
 }
 
 headers = {
