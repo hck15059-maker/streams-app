@@ -16,7 +16,7 @@
       "source": "iframe"
     },
     {
-      "name": "📺 AE",
+      "name": "📺 A&E",
       "url": "https://telegratuita.net/repro/?r=L3ByaS5waHA/aWQ9YXll",
       "source": "iframe"
     },
@@ -26,18 +26,108 @@
       "source": "iframe"
     },
     {
+      "name": "📺 HBO",
+      "url": "https://telegratuita.net/repro/?r=L3BsYXllci5waHA/aWQ9aGJv",
+      "source": "iframe"
+    },
+    {
+      "name": "📺 Space",
+      "url": "https://telegratuita.net/repro/?r=Ly90ZWxlZGVwb3J0ZXMub3JnL2dyL3Bydi5waHA/aWQ9c3BhY2U=",
+      "source": "iframe"
+    },
+    {
+      "name": "📺 Cinecanal",
+      "url": "https://telegratuita.net/repro/?r=L3ByaS5waHA/aWQ9Y2luZWNhbmFs",
+      "source": "iframe"
+    },
+    {
+      "name": "📺 TNT Series",
+      "url": "https://telegratuita.net/repro/?r=Ly90ZWxlZGVwb3J0ZXMub3JnL2dyL3Bydi5waHA/aWQ9dG50c2VyaWVz",
+      "source": "iframe"
+    },
+    {
+      "name": "📺 Dicovery Chanel",
+      "url": "https://telegratuita.net/repro/?r=L3ByaS5waHA/aWQ9ZGlzY292ZXJ5",
+      "source": "iframe"
+    },
+    {
+      "name": "📺 Discovery Home",
+      "url": "https://telegratuita.net/repro/?r=Ly90ZWxlZGVwb3J0ZXMub3JnL2dyL3Bydi5waHA/aWQ9aHlo",
+      "source": "iframe"
+    },
+    {
+      "name": "📺 Discovery ID",
+      "url": "https://telegratuita.net/repro/?r=Ly90ZWxlZGVwb3J0ZXMub3JnL2dyL3Bydi5waHA/aWQ9aWQ=",
+      "source": "iframe"
+    },
+    {
+      "name": "📺 Discovery Science",
+      "url": "https://telegratuita.net/repro/?r=L3ByaS5waHA/aWQ9c2NpZW5jZQ==",
+      "source": "iframe"
+    },
+    {
+      "name": "📺 Anima Planet",
+      "url": "https://telegratuita.net/repro/?r=L3ByaS5waHA/aWQ9cGxhbmV0",
+      "source": "iframe"
+    },
+    {
+      "name": "📺 NatGeo",
+      "url": "https://telegratuita.net/repro/?r=L3ByaS5waHA/aWQ9bmF0Z2Vv",
+      "source": "iframe"
+    },
+    {
+      "name": "📺 History Chanel",
+      "url": "https://telegratuita.net/repro/?r=L3ByaS5waHA/aWQ9aGlzdG9yeQ==",
+      "source": "iframe"
+    },
+    {
+      "name": "📺 History Chanel2",
+      "url": "https://telegratuita.net/repro/?r=L3ByaS5waHA/aWQ9aGlzdG9yeTI=",
+      "source": "iframe"
+    },
+    {
       "name": "📺 SNT (TVLIBR3)",
       "url": "https://tvlibr3.com/html/fl/?get=U05UX0M0",
       "source": "tvlibr3"
     },
     {
-      "name": "📺 Telefuturo (TVLIBR3)",
-      "url": "https://tvlibr3.com/html/fl/?get=VEVMRUZVVFVST19DNA==",
+      "name": "📺 LaTele (TVLIBR3)",
+      "url": "https://tvlibr3.com/html/fl/?get=TEFfVEVMRV9DNA==",
+      "source": "tvlibr3"
+    },
+    {
+      "name": "📺 Trece (TVLIBR3)",
+      "url": "https://tvlibr3.com/html/fl/?get=UlBDX0M0",
+      "source": "tvlibr3"
+    },
+    {
+      "name": "📺 NPY (TVLIBR3)",
+      "url": "https://tvlibr3.com/html/fl/?get=Tk9USUNJQVNfUFlfQzQ=",
       "source": "tvlibr3"
     },
     {
       "name": "📺 C9N (TVLIBR3)",
       "url": "https://tvlibr3.com/html/fl/?get=QzlOX0M0",
+      "source": "tvlibr3"
+    },
+    {
+      "name": "📺 ESPN Premiun (TVLIBR3)",
+      "url": "https://tvlibr3.com/html/fl/?get=Rm94X1Nwb3J0c19QcmVtaXVuX0hE",
+      "source": "tvlibr3"
+    },
+    {
+      "name": "📺 ESPN1 (TVLIBR3)",
+      "url": "https://tvlibr3.com/html/fl/?get=RVNQTjJIRA",
+      "source": "tvlibr3"
+    },
+    {
+      "name": "📺 ESPN2 (TVLIBR3)",
+      "url": "https://tvlibr3.com/html/fl/?get=RVNQTjJfQXJn",
+      "source": "tvlibr3"
+    },
+    {
+      "name": "📺 ESPN3 (TVLIBR3)",
+      "url": "https://tvlibr3.com/html/fl/?get=RVNQTjM",
       "source": "tvlibr3"
     }
   ]
