@@ -1,3 +1,10 @@
 {
-  "channels": []
+  "channels": [
+    {
+      "name": "📺 SNT (TVLIBR3)",
+      "url": "https://tvlibr3.com/html/fl/?get=U05UX0M0",
+      "source": "tvlibr3",
+      "decoded_param": "SNT_C4"
+    }
+  ]
 }
