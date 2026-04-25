@@ -151,7 +151,7 @@ def scrape_tvlibr3(channels):
                 final_url = f"https://tvlibr3.com/html/fl/?get={encoded}"
 
                 result.append({
-                    "name": f"{name} (TVLIBR3)",
+                    "name": f"{name} ()",
                     "url": final_url,
                     "source": "tvlibr3"
                 })
@@ -160,7 +160,7 @@ def scrape_tvlibr3(channels):
 
             else:
                 result.append({
-                    "name": f"{name} (TVLIBR3)",
+                    "name": f"{name} ()",
                     "url": src,
                     "source": "direct"
                 })
