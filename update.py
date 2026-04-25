@@ -46,7 +46,7 @@ def extract_tvlibr3(url):
 
         if '?get=' in src:
             encoded = src.split('?get=')[1]
-            return f"https://tvlibr3.com/player/?get={encoded}"
+            return f"https://tvlibr3.com/html/fl/?get={encoded}"
 
             print("🔓 Decodificado:", decoded)
 
