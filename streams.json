@@ -3,33 +3,42 @@
     {
       "name": "📺 Telefuturo",
       "url": "https://telegratuita.net/repro/?r=L3BocC9mbC8/Z2V0PVZFVk1SVVpWVkZWU1QxOUROQT09",
-      "source": "telegratuita_iframe_fallback"
+      "source": "iframe"
     },
     {
       "name": "📺 Paravision",
       "url": "https://telegratuita.net/repro/?r=L3BocC9mbC8/Z2V0PVVFRlNRVlpKVTBsUFRsOUROQT09",
-      "source": "telegratuita_iframe_fallback"
+      "source": "iframe"
     },
     {
       "name": "📺 GEN",
       "url": "https://telegratuita.net/repro/?r=L3BocC9mbC8/Z2V0PVIwVk9YMVJX",
-      "source": "telegratuita_iframe_fallback"
+      "source": "iframe"
     },
     {
       "name": "📺 AE",
       "url": "https://telegratuita.net/repro/?r=L3ByaS5waHA/aWQ9YXll",
-      "source": "telegratuita_iframe_fallback"
+      "source": "iframe"
     },
     {
       "name": "📺 AXN",
       "url": "https://telegratuita.net/repro/?r=Ly90ZWxlZGVwb3J0ZXMub3JnL2dyL3Bydi5waHA/aWQ9YXhu",
-      "source": "telegratuita_iframe_fallback"
+      "source": "iframe"
     },
     {
-      "name": "📺 SNT ",
-      "url": "https://tvlibr3.com/html/fl/?get=TEFfVEVMRV9DNA==",
-      "source": "tvlibr3",
-      "decoded_param": "LA_TELE_C4"
+      "name": "📺 SNT (TVLIBR3)",
+      "url": "https://tvlibr3.com/html/fl/?get=U05UX0M0",
+      "source": "tvlibr3"
+    },
+    {
+      "name": "📺 Telefuturo (TVLIBR3)",
+      "url": "https://tvlibr3.com/html/fl/?get=VEVMRUZVVFVST19DNA==",
+      "source": "tvlibr3"
+    },
+    {
+      "name": "📺 C9N (TVLIBR3)",
+      "url": "https://tvlibr3.com/html/fl/?get=QzlOX0M0",
+      "source": "tvlibr3"
     }
   ]
 }
