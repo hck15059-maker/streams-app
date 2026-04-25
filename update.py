@@ -76,11 +76,12 @@ def extract_telegratuita(url):
 
 def extract_tvlibr3(url):
     try:
-        res = requests.get(url, timeout=10)
+        res = session.get(url, timeout=10)
         soup = BeautifulSoup(res.content, 'html.parser')
 
         iframe = soup.find('iframe', {'id': 'iframe'})
         if not iframe:
+            print("❌ No iframe encontrado en TVLIBR3")
             return None
 
         src = iframe.get('src')
