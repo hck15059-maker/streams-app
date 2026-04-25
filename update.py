@@ -66,9 +66,9 @@ def extract_tvlibr3(url):
             # 🔥 SI NO ES URL, hay que construirla
             if not decoded.startswith("http"):
                 # Probá armar URL manual
-                return f"https://tvlibr3.com/player/{decoded}"
+            return f"https://tvlibr3.com/player/{decoded}"
 
-            return decoded
+            
 
         return src
 
