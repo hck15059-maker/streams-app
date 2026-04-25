@@ -121,6 +121,7 @@ def scrape_telegratuita(session, BASE, channels, max_retries=3):
 
 def scrape_tvlibr3(max_retries=3):
     url = "https://tvlibr3.com/en-vivo/snt/"
+    url = "https://tvlibr3.com/en-vivo/latele/"
     result = []
     retries = 0
     
