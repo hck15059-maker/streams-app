@@ -133,7 +133,7 @@ def scrape_tvlibr3(channels):
 
     for name, url in channels.items():
         try:
-            print(f"\n📺 TVLIBR3: {name}")
+            print(f"\n📺 : {name}")
 
             response = requests.get(url, timeout=10, headers=headers)
             soup = BeautifulSoup(response.content, 'html.parser')
