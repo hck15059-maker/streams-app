@@ -36,8 +36,14 @@ telegratuita_channels = {
 tvlibr3_channels = {
     "📺 SNT": "https://tvlibr3.com/en-vivo/snt/",
     "📺 Telefuturo": "https://tvlibr3.com/en-vivo/telefuturo/",
-    "📺 Trece": "https://tvlibr3.com/en-vivo/trece/",
+    "📺 Trece": "https://tvlibr3.com/en-vivo/trecepy/",
     "📺 C9N": "https://tvlibr3.com/en-vivo/c9n/",
+    "📺 NPY": "https://tvlibr3.com/en-vivo/noticiaspy/",
+    "📺 LaTele": "https://tvlibr3.com/en-vivo/latele/",
+    "📺 ESPN Premium": "https://tvlibr3.com/en-vivo/espn-premium/",
+    "📺 ESPN1": "https://tvlibr3.com/en-vivo/espn/",
+    "📺 ESPN2": "https://tvlibr3.com/en-vivo/espn-2/",
+    "📺 ESPN3": "https://tvlibr3.com/en-vivo/espn-3/",
 }
 
 headers = {
