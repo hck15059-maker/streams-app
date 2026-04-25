@@ -47,28 +47,32 @@ def extract_telegratuita(url):
         res = session.get(url, timeout=15)
         html = res.text
 
+        # 🔥 1. intentar iframe
         iframe = extract_iframe(html)
-        if not iframe:
-            return None
 
-        full_iframe = iframe if iframe.startswith("http") else BASE + iframe
+        if iframe:
+            full_iframe = iframe if iframe.startswith("http") else BASE + iframe
 
-        # 🔥 SOLO ENTRAMOS AL IFRAME, NO MÁS PROFUNDO
-        res2 = session.get(full_iframe, timeout=15)
-        html2 = res2.text
+            res2 = session.get(full_iframe, timeout=15)
+            html2 = res2.text
 
-        # 🔥 BUSCAR URL "repro"
-        match = re.search(r'https://telegratuita\.net/repro/\?r=[^"\']+', html2)
+            match = re.search(r'https://telegratuita\.net/repro/\?r=[^"\']+', html2)
+            if match:
+                return match.group(0)
+
+            return full_iframe
+
+        # 🔥 2. FALLBACK DIRECTO (IMPORTANTE)
+        match = re.search(r'https://telegratuita\.net/repro/\?r=[^"\']+', html)
         if match:
             return match.group(0)
 
-        # fallback: devolver iframe si no aparece repro
-        return full_iframe
+        print("❌ Sin iframe ni repro:", url)
+        return None
 
     except Exception as e:
         print("❌ TELEGRATUITA ERROR:", e)
         return None
-
 
 # =========================
 # 🔹 TVLIBR3 SCRAPER
