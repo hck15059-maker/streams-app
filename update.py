@@ -49,15 +49,21 @@ def extract_telegratuita(url):
 
         iframe = extract_iframe(html)
         if not iframe:
-            print("❌ No iframe")
-            return extract_m3u8(html)
+            return None
 
         full_iframe = iframe if iframe.startswith("http") else BASE + iframe
 
+        # 🔥 SOLO ENTRAMOS AL IFRAME, NO MÁS PROFUNDO
         res2 = session.get(full_iframe, timeout=15)
         html2 = res2.text
 
-        return extract_m3u8(html2) or full_iframe
+        # 🔥 BUSCAR URL "repro"
+        match = re.search(r'https://telegratuita\.net/repro/\?r=[^"\']+', html2)
+        if match:
+            return match.group(0)
+
+        # fallback: devolver iframe si no aparece repro
+        return full_iframe
 
     except Exception as e:
         print("❌ TELEGRATUITA ERROR:", e)
