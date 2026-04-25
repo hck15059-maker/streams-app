@@ -1,6 +1,31 @@
 {
   "channels": [
     {
+      "name": "📺 Telefuturo",
+      "url": "https://telegratuita.net/repro/?r=L3BocC9mbC8/Z2V0PVZFVk1SVVpWVkZWU1QxOUROQT09",
+      "source": "telegratuita_iframe_fallback"
+    },
+    {
+      "name": "📺 Paravision",
+      "url": "https://telegratuita.net/repro/?r=L3BocC9mbC8/Z2V0PVVFRlNRVlpKVTBsUFRsOUROQT09",
+      "source": "telegratuita_iframe_fallback"
+    },
+    {
+      "name": "📺 GEN",
+      "url": "https://telegratuita.net/repro/?r=L3BocC9mbC8/Z2V0PVIwVk9YMVJX",
+      "source": "telegratuita_iframe_fallback"
+    },
+    {
+      "name": "📺 AE",
+      "url": "https://telegratuita.net/repro/?r=L3ByaS5waHA/aWQ9YXll",
+      "source": "telegratuita_iframe_fallback"
+    },
+    {
+      "name": "📺 AXN",
+      "url": "https://telegratuita.net/repro/?r=Ly90ZWxlZGVwb3J0ZXMub3JnL2dyL3Bydi5waHA/aWQ9YXhu",
+      "source": "telegratuita_iframe_fallback"
+    },
+    {
       "name": "📺 SNT (TVLIBR3)",
       "url": "https://tvlibr3.com/html/fl/?get=U05UX0M0",
       "source": "tvlibr3",
