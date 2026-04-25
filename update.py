@@ -1,12 +1,7 @@
-import requests
-from bs4 import BeautifulSoup
-import base64
+import cloudscraper
 import re
 import json
-
-# =========================
-# 🔹 TELEGRATUITA
-# =========================
+import time
 
 BASE = "https://telegratuita.net"
 
@@ -19,144 +14,103 @@ channels = {
 }
 
 headers = {
-    "User-Agent": "Mozilla/5.0"
+    "User-Agent": "Mozilla/5.0",
+    "Referer": BASE
 }
 
-session = requests.Session()
+# 🔥 cloudscraper (anti-bot)
+session = cloudscraper.create_scraper()
 session.headers.update(headers)
 
-def scrape_telegratuita(session, BASE, channels):
 
-    result = []
+def find_repro(html):
+    match = re.search(r'https://telegratuita\.net/repro/\?r=[^"\']+', html)
+    return match.group(0) if match else None
+
+
+def find_iframes(html):
+    return re.findall(r'<iframe[^>]+src=["\'](.*?)["\']', html)
+
+
+def scrape_telegratuita():
+    results = []
 
     for name, url in channels.items():
         try:
-            print("\n📺 TELEGRATUITA:", name)
+            print("\n" + "="*50)
+            print(f"📺 Canal: {name}")
 
-            # 🔹 Paso 1
+            # 🔹 PASO 1
             res = session.get(url, timeout=15)
             html = res.text
 
-            iframe = re.findall(r'<iframe[^>]+src=["\'](.*?)["\']', html)
+            print("📊 HTML SIZE:", len(html))
 
-            if not iframe:
-                print("❌ sin iframe")
+            # 🔥 intento directo
+            repro = find_repro(html)
+            if repro:
+                print("✅ REPRO DIRECTO")
+                results.append({"name": name, "url": repro})
                 continue
 
-            iframe_url = iframe[0]
-            full_iframe = iframe_url if iframe_url.startswith("http") else BASE + iframe_url
+            # 🔹 PASO 2 (iframe 1)
+            iframes = find_iframes(html)
 
-            print("👉 IFRAME 1:", full_iframe)
-
-            # 🔹 Paso 2
-            res2 = session.get(full_iframe, timeout=15)
-            html2 = res2.text
-
-            # 🔥 buscar repro aquí
-            match = re.search(r'/repro/\?r=[^"\']+', html2)
-
-            if match:
-                final_url = BASE + match.group(0)
-
-                result.append({
-                    "name": name,
-                    "url": final_url
-                })
-
-                print("✅ REPRO:", final_url)
+            if not iframes:
+                print("❌ Sin iframe")
                 continue
 
-            # 🔹 Paso 3 (extra fallback)
-            iframe2 = re.findall(r'<iframe[^>]+src=["\'](.*?)["\']', html2)
+            for iframe in iframes:
+                full_iframe = iframe if iframe.startswith("http") else BASE + iframe
+                print("👉 IFRAME 1:", full_iframe)
 
-            if iframe2:
-                iframe_url2 = iframe2[0]
-                full_iframe2 = iframe_url2 if iframe_url2.startswith("http") else BASE + iframe_url2
+                res2 = session.get(full_iframe, timeout=15)
+                html2 = res2.text
 
-                print("👉 IFRAME 2:", full_iframe2)
+                repro = find_repro(html2)
+                if repro:
+                    print("✅ REPRO EN IFRAME 1")
+                    results.append({"name": name, "url": repro})
+                    break
 
-                res3 = session.get(full_iframe2, timeout=15)
-                html3 = res3.text
+                # 🔹 PASO 3 (iframe dentro de iframe)
+                iframes2 = find_iframes(html2)
 
-                match2 = re.search(r'/repro/\?r=[^"\']+', html3)
+                for iframe2 in iframes2:
+                    full_iframe2 = iframe2 if iframe2.startswith("http") else BASE + iframe2
+                    print("👉 IFRAME 2:", full_iframe2)
 
-                if match2:
-                    final_url = BASE + match2.group(0)
+                    res3 = session.get(full_iframe2, timeout=15)
+                    html3 = res3.text
 
-                    result.append({
-                        "name": name,
-                        "url": final_url
-                    })
+                    repro = find_repro(html3)
+                    if repro:
+                        print("✅ REPRO EN IFRAME 2")
+                        results.append({"name": name, "url": repro})
+                        break
 
-                    print("✅ REPRO 2:", final_url)
+                else:
                     continue
+                break
 
-            print("❌ no se encontró repro")
+            time.sleep(1)  # anti-bloqueo
 
         except Exception as e:
             print("❌ ERROR:", e)
 
-    return result
-
-# =========================
-# 🔹 TVLIBR3
-# =========================
-
-def scrape_tvlibr3():
-
-    url = "https://tvlibr3.com/en-vivo/snt/"
-    result = []
-
-    try:
-        print("\n📺 TVLIBR3: SNT")
-
-        response = requests.get(url, timeout=10)
-        soup = BeautifulSoup(response.content, 'html.parser')
-
-        iframe = soup.find('iframe', {'id': 'iframe'})
-        if not iframe:
-            return result
-
-        src = iframe.get('src')
-
-        if '?get=' in src:
-            encoded_param = src.split('?get=')[1]
-
-            # 🔥 NO decodificamos, solo construimos URL correcta
-            final_url = f"https://tvlibr3.com/html/fl/?get={encoded_param}"
-
-            result.append({
-                "name": "📺 SNT (TVLIBR3)",
-                "url": final_url
-            })
-
-        else:
-            result.append({
-                "name": "📺 SNT (TVLIBR3)",
-                "url": src
-            })
-
-    except Exception as e:
-        print("❌ TVLIBR3 ERROR:", e)
-
-    return result
+    return results
 
 
 # =========================
-# 🔹 EJECUCIÓN PRINCIPAL
+# 🔹 EJECUCIÓN
 # =========================
 
 result = {"channels": []}
 
-# ejecutar por separado (tu idea)
-result["channels"] += scrape_telegratuita(session, BASE, channels)
-result["channels"] += scrape_tvlibr3()
+result["channels"] += scrape_telegratuita()
 
-# =========================
-# 🔹 GUARDAR JSON
-# =========================
-
+# guardar JSON
 with open("streams.json", "w", encoding="utf-8") as f:
     json.dump(result, f, indent=2, ensure_ascii=False)
 
-print("\n🔥 TOTAL CANALES:", len(result["channels"]))
+print("\n🔥 TOTAL:", len(result["channels"]))
