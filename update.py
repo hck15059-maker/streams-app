@@ -50,7 +50,6 @@ tvlibr3_channels = {
     "📺 Fox Sport": "https://tvlibr3.com/en-vivo/fox-sports/",
     "📺 Fox Sport2": "https://tvlibr3.com/en-vivo/fox-sports-2/",
     "📺 Fox Sport3": "https://tvlibr3.com/en-vivo/fox-sports-3/",
-    "📺 Fox Sport3 op 2": "https://tvlibr3.com/en-vivo/fox-sports-3/", 
 }
 
 headers = {
