@@ -44,6 +44,13 @@ tvlibr3_channels = {
     "📺 ESPN1": "https://tvlibr3.com/en-vivo/espn/",
     "📺 ESPN2": "https://tvlibr3.com/en-vivo/espn-2/",
     "📺 ESPN3": "https://tvlibr3.com/en-vivo/espn-3/",
+    "📺 ESPN4": "https://tvlibr3.com/en-vivo/espn-4/",
+    "📺 ESPN5": "https://tvlibr3.com/en-vivo/espn-5/",
+    "📺 ESPN6": "https://tvlibr3.com/en-vivo/espn-6/",
+    "📺 Fox Sport": "https://tvlibr3.com/en-vivo/fox-sports/",
+    "📺 Fox Sport2": "https://tvlibr3.com/en-vivo/fox-sports-2/",
+    "📺 Fox Sport3": "https://tvlibr3.com/en-vivo/fox-sports-3/",
+    "📺 Fox Sport3 op 2": "https://tvlibr3.com/en-vivo/fox-sports-3/", 
 }
 
 headers = {
