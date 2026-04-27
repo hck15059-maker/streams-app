@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import base64
 import re
 import json
 import time
@@ -23,14 +22,14 @@ telegratuita_channels = {
     "📺 HBO": BASE + "/en-vivo/hbo.php",
     "📺 De Pelicula": BASE + "/live/depelicula.php",
     "📺 Space": BASE + "/en-vivo/space.php",
-    "📺 Cine Max": BASE + "en-vivo/cinemax.php",
+    "📺 Cine Max": BASE + "/en-vivo/cinemax.php",
     "📺 Cinecanal": BASE + "/en-vivo/cinecanal.php",
     "📺 TNT Series": BASE + "/en-vivo/tntseries.php",
-    "📺 Dicovery Chanel": BASE + "/en-vivo/discovery-channel.php",
+    "📺 Discovery Channel": BASE + "/en-vivo/discovery-channel.php",
     "📺 Discovery Home": BASE + "/en-vivo/discovery-home-and-health.php",
     "📺 Discovery ID": BASE + "/en-vivo/investigacion-discovery.php",
     "📺 Discovery Science": BASE + "/en-vivo/discovery-science.php",
-    "📺 Anima Planet": BASE + "/en-vivo/animalplanet.php",
+    "📺 Animal Planet": BASE + "/en-vivo/animalplanet.php",
 }
 
 tvlibr3_channels = {
@@ -40,27 +39,30 @@ tvlibr3_channels = {
     "📺 C9N": "https://tvlibr3.com/en-vivo/c9n/",
     "📺 NPY": "https://tvlibr3.com/en-vivo/noticiaspy/",
     "📺 LaTele": "https://tvlibr3.com/en-vivo/latele/",
-    "📺 ESPN Premium": "https://tvlibr3.com/en-vivo/espn-premium/",
     "📺 ESPN1": "https://tvlibr3.com/en-vivo/espn/",
     "📺 ESPN2": "https://tvlibr3.com/en-vivo/espn-2/",
     "📺 ESPN3": "https://tvlibr3.com/en-vivo/espn-3/",
-    "📺 ESPN4": "https://tvlibr3.com/en-vivo/espn-4/",
-    "📺 ESPN5": "https://tvlibr3.com/en-vivo/espn-5/",
-    "📺 ESPN6": "https://tvlibr3.com/en-vivo/espn-6/",
-    "📺 Fox Sport": "https://tvlibr3.com/en-vivo/fox-sports/",
-    "📺 Fox Sport2": "https://tvlibr3.com/en-vivo/fox-sports-2/",
-    "📺 Fox Sport3": "https://tvlibr3.com/en-vivo/fox-sports-3/",
+    "📺 Fox Sports": "https://tvlibr3.com/en-vivo/fox-sports/",
 }
 
 headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
-    "Accept-Language": "es-ES,es;q=0.9",
-    "Referer": BASE
+    "User-Agent": "Mozilla/5.0",
+    "Accept-Language": "es-ES,es;q=0.9"
 }
 
-# sesión anti-bloqueo
 session = cloudscraper.create_scraper()
 session.headers.update(headers)
+
+# =========================
+# 🔥 LIMPIAR NOMBRE
+# =========================
+
+def clean_channel_name(name):
+    return name.lower() \
+        .replace("📺", "") \
+        .replace(" ", "") \
+        .replace(".", "") \
+        .strip()
 
 # =========================
 # 🔹 TELEGRATUITA
@@ -76,13 +78,14 @@ def scrape_telegratuita(session, BASE, channels):
             res = session.get(url, timeout=15)
             html = res.text
 
-            # 🔥 buscar repro directo
             match = re.search(r'https://telegratuita\.net/repro/\?r=[^"\']+', html)
+
             if match:
                 final_url = match.group(0)
 
                 result.append({
-                    "name": name,
+                    "name": name.strip(),
+                    "id": clean_channel_name(name),
                     "url": final_url,
                     "source": "telegratuita"
                 })
@@ -90,7 +93,6 @@ def scrape_telegratuita(session, BASE, channels):
                 print("✅ REPRO:", final_url)
                 continue
 
-            # 🔹 fallback iframe
             iframe = re.findall(r'<iframe[^>]+src=["\'](.*?)["\']', html)
 
             if iframe:
@@ -101,29 +103,26 @@ def scrape_telegratuita(session, BASE, channels):
                 html2 = res2.text
 
                 match2 = re.search(r'https://telegratuita\.net/repro/\?r=[^"\']+', html2)
+
                 if match2:
                     final_url = match2.group(0)
-                    
-                
-                clean_name = clean_channel_name(name)
-                result.append({
-                  "name": name.strip(),
-                  "id": clean_name,
-                  "url": final_url,
-                  "source": "telegratuita"
-                  })
+
+                    result.append({
+                        "name": name.strip(),
+                        "id": clean_channel_name(name),
+                        "url": final_url,
+                        "source": "telegratuita"
+                    })
 
                     print("✅ REPRO iframe:", final_url)
                     continue
 
-                # fallback final
                 result.append({
-                    "name": name,
+                    "name": name.strip(),
+                    "id": clean_channel_name(name),
                     "url": full_iframe,
                     "source": "iframe"
                 })
-
-                print("⚠️ usando iframe:", full_iframe)
 
         except Exception as e:
             print("❌ ERROR TELEGRATUITA:", e)
@@ -131,7 +130,6 @@ def scrape_telegratuita(session, BASE, channels):
         time.sleep(1)
 
     return result
-
 
 # =========================
 # 🔹 TVLIBR3
@@ -142,7 +140,7 @@ def scrape_tvlibr3(channels):
 
     for name, url in channels.items():
         try:
-            print(f"\n📺 : {name}")
+            print(f"\n📺 TVLIBR3: {name}")
 
             response = requests.get(url, timeout=10, headers=headers)
             soup = BeautifulSoup(response.content, 'html.parser')
@@ -156,21 +154,21 @@ def scrape_tvlibr3(channels):
 
             if '?get=' in src:
                 encoded = src.split('?get=')[1]
-
                 final_url = f"https://tvlibr3.com/html/fl/?get={encoded}"
-            clean_name = clean_channel_name(name)
-            result.append({
-                "name": name.strip(),
-                "id": clean_name,
-                "url": final_url,
-                "source": "tvlibr3"
+
+                result.append({
+                    "name": name.strip(),
+                    "id": clean_channel_name(name),
+                    "url": final_url,
+                    "source": "tvlibr3"
                 })
 
                 print("✅ OK:", final_url)
 
             else:
                 result.append({
-                    "name": f"{name} ",
+                    "name": name.strip(),
+                    "id": clean_channel_name(name),
                     "url": src,
                     "source": "direct"
                 })
@@ -181,7 +179,6 @@ def scrape_tvlibr3(channels):
         time.sleep(1)
 
     return result
-
 
 # =========================
 # 🔹 EJECUCIÓN
