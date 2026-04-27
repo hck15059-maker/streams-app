@@ -103,12 +103,15 @@ def scrape_telegratuita(session, BASE, channels):
                 match2 = re.search(r'https://telegratuita\.net/repro/\?r=[^"\']+', html2)
                 if match2:
                     final_url = match2.group(0)
-
-                    result.append({
-                        "name": name,
-                        "url": final_url,
-                        "source": "telegratuita_iframe"
-                    })
+                    
+                
+                clean_name = clean_channel_name(name)
+                result.append({
+                  "name": name.strip(),
+                  "id": clean_name,
+                  "url": final_url,
+                  "source": "telegratuita"
+                  })
 
                     print("✅ REPRO iframe:", final_url)
                     continue
@@ -155,11 +158,12 @@ def scrape_tvlibr3(channels):
                 encoded = src.split('?get=')[1]
 
                 final_url = f"https://tvlibr3.com/html/fl/?get={encoded}"
-
-                result.append({
-                    "name": f"{name} ",
-                    "url": final_url,
-                    "source": "tvlibr3"
+            clean_name = clean_channel_name(name)
+            result.append({
+                "name": name.strip(),
+                "id": clean_name,
+                "url": final_url,
+                "source": "tvlibr3"
                 })
 
                 print("✅ OK:", final_url)
