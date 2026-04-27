@@ -78,8 +78,14 @@ def scrape_telegratuita(session, base_url, channels):
             # Buscar reproductor directo
             match = re.search(r'https://telegratuita\.net/repro/\?r=[^"\']+', html)
             if match:
-                final_url = match.group(0)
-                results.append({"name": name, "url": final_url, "source": "telegratuita"})
+               final_url = match.group(0)
+
+               results.append({
+                 "name": name,
+                 "id": clean_channel_id(name),
+                 "url": final_url,
+                 "source": "telegratuita"
+                })
                 print("✅")
                 continue
 
@@ -96,7 +102,15 @@ def scrape_telegratuita(session, base_url, channels):
                     final_url = match2.group(0)
                     results.append({"name": name, "url": final_url, "source": "telegratuita_iframe"})
                 else:
-                    results.append({"name": name, "url": full_iframe, "source": "iframe_direct"})
+                    if match:
+                 final_url = match.group(0)
+
+                results.append({
+                 "name": name,
+                 "id": clean_channel_id(name),
+                 "url": final_url,
+                 "source": "telegratuita"
+                 })
                 print("✅ (iframe)")
             else:
                 print("❌ No encontrado")
@@ -130,7 +144,12 @@ def scrape_tvlibr3(channels):
                 results.append({"name": name, "url": final_url, "source": "tvlibr3"})
                 print("✅")
             else:
-                results.append({"name": name, "url": src, "source": "direct"})
+                results.append({
+                     "name": name,
+                     "id": clean_channel_id(name),
+                     "url": full_iframe,
+                     "source": "iframe_direct"
+                })
                 print("✅ (src)")
 
         except Exception as e:
