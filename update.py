@@ -24,12 +24,12 @@ telegratuita_channels = {
     "📺 Space": f"{BASE_TELEGRATUITA}/en-vivo/space.php",
     "📺 Cine Max": f"{BASE_TELEGRATUITA}/en-vivo/cinemax.php",
     "📺 Cinecanal": f"{BASE_TELEGRATUITA}/en-vivo/cinecanal.php",
-    "📺 TNT Series": f"{BASE_TELEGRATUITA}/en-vivo/tntseries.php",
-    "📺 Dicovery Chanel": f"{BASE_TELEGRATUITA}/en-vivo/discovery-channel.php",
+    "📺 TNT Serie": f"{BASE_TELEGRATUITA}/en-vivo/tntseries.php",
+    "📺 Discovery Chanel": f"{BASE_TELEGRATUITA}/en-vivo/discovery-channel.php",
     "📺 Discovery Home": f"{BASE_TELEGRATUITA}/en-vivo/discovery-home-and-health.php",
     "📺 Discovery ID": f"{BASE_TELEGRATUITA}/en-vivo/investigacion-discovery.php",
     "📺 Discovery Science": f"{BASE_TELEGRATUITA}/en-vivo/discovery-science.php",
-    "📺 Anima Planet": f"{BASE_TELEGRATUITA}/en-vivo/animalplanet.php",
+    "📺 Animal Planet": f"{BASE_TELEGRATUITA}/en-vivo/animalplanet.php",
 }
 
 tvlibr3_channels = {
