@@ -1,158 +1,63 @@
 {
   "channels": [
     {
-      "name": "📺 Telefuturo",
-      "url": "https://telegratuita.net/repro/?r=L3BocC9mbC8/Z2V0PVZFVk1SVVpWVkZWU1QxOUROQT09",
-      "source": "iframe_direct"
-    },
-    {
-      "name": "📺 Paravision",
-      "url": "https://telegratuita.net/repro/?r=L3BocC9mbC8/Z2V0PVVFRlNRVlpKVTBsUFRsOUROQT09",
-      "source": "iframe_direct"
-    },
-    {
-      "name": "📺 GEN",
-      "url": "https://telegratuita.net/repro/?r=L3BocC9mbC8/Z2V0PVIwVk9YMVJX",
-      "source": "iframe_direct"
-    },
-    {
-      "name": "📺 A&E",
-      "url": "https://telegratuita.net/repro/?r=L3ByaS5waHA/aWQ9YXll",
-      "source": "iframe_direct"
-    },
-    {
-      "name": "📺 AXN",
-      "url": "https://telegratuita.net/repro/?r=Ly90ZWxlZGVwb3J0ZXMub3JnL2dyL3Bydi5waHA/aWQ9YXhu",
-      "source": "iframe_direct"
-    },
-    {
-      "name": "📺 HBO",
-      "url": "https://telegratuita.net/repro/?r=L3BsYXllci5waHA/aWQ9aGJv",
-      "source": "iframe_direct"
-    },
-    {
-      "name": "📺 Space",
-      "url": "https://telegratuita.net/repro/?r=Ly90ZWxlZGVwb3J0ZXMub3JnL2dyL3Bydi5waHA/aWQ9c3BhY2U=",
-      "source": "iframe_direct"
-    },
-    {
-      "name": "📺 Cine Max",
-      "url": "https://telegratuita.net/repro/?r=Ly90ZWxlZGVwb3J0ZXMub3JnL2dyL3Bydi5waHA/aWQ9Y2luZW1heA==",
-      "source": "iframe_direct"
-    },
-    {
-      "name": "📺 Cinecanal",
-      "url": "https://telegratuita.net/repro/?r=L3ByaS5waHA/aWQ9Y2luZWNhbmFs",
-      "source": "iframe_direct"
-    },
-    {
-      "name": "📺 TNT Series",
-      "url": "https://telegratuita.net/repro/?r=Ly90ZWxlZGVwb3J0ZXMub3JnL2dyL3Bydi5waHA/aWQ9dG50c2VyaWVz",
-      "source": "iframe_direct"
-    },
-    {
-      "name": "📺 Dicovery Chanel",
-      "url": "https://telegratuita.net/repro/?r=L3ByaS5waHA/aWQ9ZGlzY292ZXJ5",
-      "source": "iframe_direct"
-    },
-    {
-      "name": "📺 Discovery Home",
-      "url": "https://telegratuita.net/repro/?r=Ly90ZWxlZGVwb3J0ZXMub3JnL2dyL3Bydi5waHA/aWQ9aHlo",
-      "source": "iframe_direct"
-    },
-    {
-      "name": "📺 Discovery ID",
-      "url": "https://telegratuita.net/repro/?r=Ly90ZWxlZGVwb3J0ZXMub3JnL2dyL3Bydi5waHA/aWQ9aWQ=",
-      "source": "iframe_direct"
-    },
-    {
-      "name": "📺 Discovery Science",
-      "url": "https://telegratuita.net/repro/?r=L3ByaS5waHA/aWQ9c2NpZW5jZQ==",
-      "source": "iframe_direct"
-    },
-    {
-      "name": "📺 Anima Planet",
-      "url": "https://telegratuita.net/repro/?r=L3ByaS5waHA/aWQ9cGxhbmV0",
-      "source": "iframe_direct"
-    },
-    {
       "name": "📺 SNT",
+      "id": "snt",
       "url": "https://tvlibr3.com/html/fl/?get=U05UX0M0",
       "source": "tvlibr3"
     },
     {
       "name": "📺 Telefuturo",
+      "id": "telefuturo",
       "url": "https://tvlibr3.com/html/fl/?get=VEVMRUZVVFVST19DNA==",
       "source": "tvlibr3"
     },
     {
       "name": "📺 Trece",
+      "id": "trece",
       "url": "https://tvlibr3.com/html/fl/?get=UlBDX0M0",
       "source": "tvlibr3"
     },
     {
       "name": "📺 C9N",
+      "id": "c9n",
       "url": "https://tvlibr3.com/html/fl/?get=QzlOX0M0",
       "source": "tvlibr3"
     },
     {
       "name": "📺 NPY",
+      "id": "npy",
       "url": "https://tvlibr3.com/html/fl/?get=Tk9USUNJQVNfUFlfQzQ=",
       "source": "tvlibr3"
     },
     {
       "name": "📺 LaTele",
+      "id": "latele",
       "url": "https://tvlibr3.com/html/fl/?get=TEFfVEVMRV9DNA==",
       "source": "tvlibr3"
     },
     {
-      "name": "📺 ESPN Premium",
-      "url": "https://tvlibr3.com/html/fl/?get=Rm94X1Nwb3J0c19QcmVtaXVuX0hE",
-      "source": "tvlibr3"
-    },
-    {
       "name": "📺 ESPN1",
+      "id": "espn1",
       "url": "https://tvlibr3.com/html/fl/?get=RVNQTjJIRA",
       "source": "tvlibr3"
     },
     {
       "name": "📺 ESPN2",
+      "id": "espn2",
       "url": "https://tvlibr3.com/html/fl/?get=RVNQTjJfQXJn",
       "source": "tvlibr3"
     },
     {
       "name": "📺 ESPN3",
+      "id": "espn3",
       "url": "https://tvlibr3.com/html/fl/?get=RVNQTjM",
       "source": "tvlibr3"
     },
     {
-      "name": "📺 ESPN4",
-      "url": "https://tvlibr3.com/html/fl/?get=RVNQTkhE",
-      "source": "tvlibr3"
-    },
-    {
-      "name": "📺 ESPN5",
-      "url": "https://tvlibr3.com/html/fl/?get=RVNQTjQ=",
-      "source": "tvlibr3"
-    },
-    {
-      "name": "📺 ESPN6",
-      "url": "https://tvlibr3.com/html/fl/?get=Rm94U3BvcnRzM19VWQ==",
-      "source": "tvlibr3"
-    },
-    {
-      "name": "📺 Fox Sport",
+      "name": "📺 Fox Sports",
+      "id": "foxsports",
       "url": "https://tvlibr3.com/html/fl/?get=Rm94U3BvcnRz",
-      "source": "tvlibr3"
-    },
-    {
-      "name": "📺 Fox Sport2",
-      "url": "https://tvlibr3.com/html/fl/?get=Rm94U3BvcnRzMkhE",
-      "source": "tvlibr3"
-    },
-    {
-      "name": "📺 Fox Sport3",
-      "url": "https://tvlibr3.com/html/fl/?get=Rm94U3BvcnRzM0hE",
       "source": "tvlibr3"
     }
   ]
