@@ -124,11 +124,14 @@ def scrape_telegratuita(session, BASE, channels):
                     "source": "iframe"
                 })
 
+                print("⚠️ iframe usado:", full_iframe)
+
         except Exception as e:
             print("❌ ERROR TELEGRATUITA:", e)
 
         time.sleep(1)
 
+    print("TELEGRATUITA TOTAL:", len(result))
     return result
 
 # =========================
