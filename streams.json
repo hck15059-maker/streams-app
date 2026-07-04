@@ -1,3 +1,69 @@
 {
-  "channels": []
+  "channels": [
+    {
+      "name": " Telefuturo",
+      "url": "https://telegratuita.net/repro/?r=L2ZsLWV4dC5waHA/Z2V0PVZFVk1SVVpWVkZWU1QxOUROQT09",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " Paravision",
+      "url": "https://telegratuita.net/repro/?r=L2ZsLWV4dC5waHA/Z2V0PVVFRlNRVlpKVTBsUFRsOUROQT09",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " GEN",
+      "url": "https://telegratuita.net/repro/?r=L2ZsLWV4dC5waHA/Z2V0PVIwVk9YMVJX",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " HBO",
+      "url": "https://telegratuita.net/repro/?r=L2RybS5waHA/aWQ9aGJv",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " Space",
+      "url": "https://telegratuita.net/repro/?r=L2xhdGFtLnBocD9jYW5hbD1zcGFjZQ==",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " Cine Max",
+      "url": "https://telegratuita.net/repro/?r=L2xhdGFtLnBocD9jYW5hbD1jaW5lbWF4",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " Cinecanal",
+      "url": "https://telegratuita.net/repro/?r=L2xhdGFtLnBocD9jYW5hbD1jaW5lY2FuYWw=",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " TNT Serie",
+      "url": "https://telegratuita.net/repro/?r=L2xhdGFtLnBocD9jYW5hbD10bnRzZXJpZXM=",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " Discovery Chanel",
+      "url": "https://telegratuita.net/repro/?r=L2xhdGFtLnBocD9jYW5hbD1kaXNjb3Zlcnk=",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " Discovery Home",
+      "url": "https://telegratuita.net/repro/?r=L2xhdGFtLnBocD9jYW5hbD1oeWg=",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " Discovery ID",
+      "url": "https://telegratuita.net/repro/?r=L2V4dGVuc2lvbi5waHA/cj1odHRwcyUzQSUyRiUyRjEwNzctdGJ4LnZyaW9vdHQuY29tJTJGZGlzY292ZXJ5aWRhciUyRm1hbmlmZXN0Lm1wZCUzRmNrJTNEZXlJMU9UZG1OR1ExT1RoaU56QTFaVEZsT0RSbE1qVmxOemM0TURVeU9EYzJNQ0k2SWpZME4yTmlOMkl4Wm1ReFlqUXdaRGszWXpBd01qazBaR015TWpjM1lXRTVJbjAlMjUzRA==",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " Discovery Science",
+      "url": "https://telegratuita.net/repro/?r=L3ByaS5waHA/aWQ9c2NpZW5jZQ==",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " Animal Planet",
+      "url": "https://telegratuita.net/repro/?r=L2xhdGFtLnBocD9jYW5hbD1wbGFuZXQ=",
+      "source": "iframe_direct"
+    }
+  ]
 }
