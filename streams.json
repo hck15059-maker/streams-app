@@ -1,3 +1,69 @@
 {
-  "channels": []
+  "channels": [
+    {
+      "name": " Telefuturo",
+      "url": "https://telegratuita.net/repro/?r=L2ZsLWV4dC5waHA/Z2V0PVZFVk1SVVpWVkZWU1QxOUROQT09",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " Paravision",
+      "url": "https://telegratuita.net/repro/?r=L2ZsLWV4dC5waHA/Z2V0PVVFRlNRVlpKVTBsUFRsOUROQT09",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " GEN",
+      "url": "https://telegratuita.net/repro/?r=L2ZsLWV4dC5waHA/Z2V0PVIwVk9YMVJX",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " HBO",
+      "url": "https://telegratuita.net/repro/?r=L2V4dGUucGhwP3I9aHR0cHMlM0ElMkYlMkZjZG4uc2Vuc2EuY29tLmFyJTJGbGl2ZSUyRmVkcyUyRkhCTyUyRmxpdmVfZGFzaF9jbGQlMkZIQk8ubXBkJTNGY2slM0RleUprWldGa01ESXpaamRoT0RFMk16UXpNemxoWlRZek9UazVNR014TlRFM1lTSTZJbUpoT1Rjd01qSXlZalEwTmpaak5qRmtNR1JsWTJOak5qZGhZak0wTkRVeUluMCUzRCUyNmhlYWRlcnMlM0RleUp2Y21sbmFXNGlPaUpvZEhSd2N6b3ZMM0JzWVhsbGNpNXpaVzV6WVM1amIyMHVZWElpTENKeVpXWmxjbVZ5SWpvaWFIUjBjSE02THk5d2JHRjVaWEl1YzJWdWMyRXVZMjl0TG1GeUx5SXNJblZ6WlhJdFlXZGxiblFpT2lKTmIzcHBiR3hoTHpVdU1DQW9WMmx1Wkc5M2N5Qk9WQ0F4TUM0d095QlhhVzQyTkRzZ2VEWTBLU0JCY0hCc1pWZGxZa3RwZEM4MU16Y3VNellnS0V0SVZFMU1MQ0JzYVd0bElFZGxZMnR2S1NCRGFISnZiV1V2TVRRNExqQXVNQzR3SUZOaFptRnlhUzgxTXpjdU16WWlMQ0p6WldNdFkyZ3RkV0V0Y0d4aGRHWnZjbTBpT2lKY0lsZHBibVJ2ZDNOY0lpSXNJbk5sWXkxamFDMTFZUzF0YjJKcGJHVWlPaUklMkZNQ0lzSW5ObFl5MW5jR01pT2lJeEluMCUzRCUyNnRpdGxlJTNEVGVsZUdyYXR1aXRh",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " Space",
+      "url": "https://telegratuita.net/repro/?r=L2xhdGFtLnBocD9jYW5hbD1zcGFjZQ==",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " Cine Max",
+      "url": "https://telegratuita.net/repro/?r=L2xhdGFtLnBocD9jYW5hbD1jaW5lbWF4",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " Cinecanal",
+      "url": "https://telegratuita.net/repro/?r=L2xhdGFtLnBocD9jYW5hbD1jaW5lY2FuYWw=",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " TNT Serie",
+      "url": "https://telegratuita.net/repro/?r=L2xhdGFtLnBocD9jYW5hbD10bnRzZXJpZXM=",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " Discovery Chanel",
+      "url": "https://telegratuita.net/repro/?r=L2xhdGFtLnBocD9jYW5hbD1kaXNjb3Zlcnk=",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " Discovery Home",
+      "url": "https://telegratuita.net/repro/?r=L2xhdGFtLnBocD9jYW5hbD1oeWg=",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " Discovery ID",
+      "url": "https://telegratuita.net/repro/?r=L2V4dGVuc2lvbi5waHA/cj1odHRwcyUzQSUyRiUyRjEwNzctdGJ4LnZyaW9vdHQuY29tJTJGZGlzY292ZXJ5aWRhciUyRm1hbmlmZXN0Lm1wZCUzRmNrJTNEZXlJMU9UZG1OR1ExT1RoaU56QTFaVEZsT0RSbE1qVmxOemM0TURVeU9EYzJNQ0k2SWpZME4yTmlOMkl4Wm1ReFlqUXdaRGszWXpBd01qazBaR015TWpjM1lXRTVJbjAlMjUzRA==",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " Discovery Science",
+      "url": "https://telegratuita.net/repro/?r=L3ByaS5waHA/aWQ9c2NpZW5jZQ==",
+      "source": "iframe_direct"
+    },
+    {
+      "name": " Animal Planet",
+      "url": "https://telegratuita.net/repro/?r=L2xhdGFtLnBocD9jYW5hbD1wbGFuZXQ=",
+      "source": "iframe_direct"
+    }
+  ]
 }
