@@ -1,11 +1,6 @@
 {
   "channels": [
     {
-      "name": " Telefuturo",
-      "url": "https://telegratuita.net/repro/?r=L2ZsLWV4dC5waHA/Z2V0PVZFVk1SVVpWVkZWU1QxOUROQT09",
-      "source": "iframe_direct"
-    },
-    {
       "name": " Paravision",
       "url": "https://telegratuita.net/repro/?r=L2ZsLWV4dC5waHA/Z2V0PVVFRlNRVlpKVTBsUFRsOUROQT09",
       "source": "iframe_direct"
@@ -31,11 +26,6 @@
       "source": "iframe_direct"
     },
     {
-      "name": " Cinecanal",
-      "url": "https://telegratuita.net/hls_player.php?get=Ly9jZG4xdGxpbmtnby50bGluay5jbC9jaW5lY2FuYWxoZC9pbmRleC5tM3U4",
-      "source": "iframe_direct"
-    },
-    {
       "name": " TNT Serie",
       "url": "https://telegratuita.net/repro/?r=L2xhdGFtLnBocD9jYW5hbD10bnRzZXJpZXM=",
       "source": "iframe_direct"
@@ -43,26 +33,6 @@
     {
       "name": " Discovery Chanel",
       "url": "https://telegratuita.net/hls_player.php?get=Ly9jZG4xdGxpbmtnby50bGluay5jbC9kaXNjb3ZlcnloZC90cmFja3MtdjFhMS9tb25vLm0zdTg=",
-      "source": "iframe_direct"
-    },
-    {
-      "name": " Discovery Home",
-      "url": "https://telegratuita.net/hls.php?get=Ly9jZG4xdGxpbmtnby50bGluay5jbC9kaXNjb3ZlcnloeWgvdHJhY2tzLXYxYTEvbW9uby5tM3U4",
-      "source": "iframe_direct"
-    },
-    {
-      "name": " Discovery ID",
-      "url": "https://telegratuita.net/hls.php?get=Ly9jZG4xdGxpbmtnby50bGluay5jbC9kaXNjb3ZlcnlpZGhkL3RyYWNrcy12MWExL21vbm8ubTN1OA==",
-      "source": "iframe_direct"
-    },
-    {
-      "name": " Discovery Science",
-      "url": "https://telegratuita.net/hls_player.php?get=Ly9jZG4xdGxpbmtnby50bGluay5jbC9kaXNjb3ZlcnlzY2llbmNlL3RyYWNrcy12MWExL21vbm8ubTN1OA==",
-      "source": "iframe_direct"
-    },
-    {
-      "name": " Animal Planet",
-      "url": "https://telegratuita.net/hls_player.php?get=Ly9jZG4xdGxpbmtnby50bGluay5jbC9hbmltYWxwbGFuZXRoZC9pbmRleC5tM3U4",
       "source": "iframe_direct"
     }
   ]
